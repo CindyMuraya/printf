@@ -15,6 +15,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int print_percent(va_list list);
 int print_decimal(va_list list);
 int print_int(va_list list);
 int print_unsigned(va_list list);
@@ -28,7 +29,7 @@ int print_string(va_list list);
 int print_char(va_list list);
 int print_pointer(va_list list);
 int get_flags(char s, list);
-int rev_string(char *s);
+int print_rev(va_list list);
 int print_rot13(va_list list);
 
 #endif
