@@ -19,10 +19,10 @@ int _printf(const char *format, ...);
 		{"%S", printf_string}, {"%p", printf_pointer}
 	};
 
-	va_list list;
+	va_list args;
 	int i = 0, j, len = 0;
 
-	va_start(list, format);
+	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
 		return (-1);
@@ -34,7 +34,7 @@ int _printf(const char *format, ...);
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				len += m[j].f(list);
+				len += m[j].f(args);
 				i = i + 2;
 			}
 			j--;
@@ -43,6 +43,6 @@ int _printf(const char *format, ...);
 		len++;
 		i++;
 	}
-	va_end(list);
+	va_end(args);
 	return (len);
 }
