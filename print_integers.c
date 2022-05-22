@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_decimal - converts input into a base 10 integer
- * @list: list of arguments
+ * printf_decimal - converts input into a base 10 integer
+ * @args: list of arguments
  * Return: number of characters
  */
 
-int print_decimal(va_list list)
+int printf_decimal(va_list args)
 {
-	int n = va_arg(list, int);
+	int n = va_arg(args, int);
 	int num, last = n % 10, digit;
 	int i = 1;
 	int exp = 1;
@@ -46,14 +46,14 @@ int print_decimal(va_list list)
 }
 
 /**
- * print_int - converts input into an integer
- * @list: list of arguments
+ * printf_int - converts input into an integer
+ * @args: list of arguments
  * Return: number of characters
  */
 
-int print_int(va_list list)
+int printf_int(va_list args)
 {
-	int n = va_arg(list, int);
+	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
 	int i = 1;
 
