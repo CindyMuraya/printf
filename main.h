@@ -32,4 +32,15 @@ int get_flags(char s, args);
 int printf_rev(va_list args);
 int printf_rot13(va_list args);
 
+/**
+ * struct format - match the conversion specifiers for printf
+ * @id: type of specifier
+ * @f: pointer
+ */
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} convert_match;
+
 #endif
