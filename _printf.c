@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			}
 			j--;
 		}
-		_printf(format[i]);
+		_putchar(format[i]);
 		len++;
 		i++;
 	}
