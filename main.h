@@ -30,6 +30,5 @@ int print_pointer(va_list list);
 int get_flags(char s, list);
 int rev_string(char *s);
 int print_rot13(va_list list);
-int print_percent(va_list args __attribute__((unused)))
 
 #endif
