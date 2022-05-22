@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdbool.h>
+#include <<unistd.h>
 
 /*
  * Desc: Header file containing the prototypes of all
