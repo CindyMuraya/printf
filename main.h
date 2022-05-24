@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdbool.h>
-#include <<unistd.h>
+#include <unistd.h>
 
 /*
  * Desc: Header file containing the prototypes of all
@@ -15,20 +15,32 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_decimal(va_list list);
-int print_int(va_list list);
-int print_unsigned(va_list list);
+int printf_percent(va_list args);
+int printf_decimal(va_list args);
+int printf_int(va_list args);
+int printf_unsigned(va_list args);
 char *convert(unsigned long int num, int base, int lowercase);
-int print_binary(va_list list);
-int print_decimal(unsigned int x);
-int print_octal(unsigned int x);
-int print_hex(unsigned int x);
-int print_HEX(unsigned int x);
-int print_string(va_list list);
-int print_char(va_list list);
-int print_pointer(va_list list);
-int get_flags(char s, list);
-int rev_string(char *s);
-int print_rot13(va_list list);
+int printf_binary(va_list args);
+int printf_decimal(unsigned int x);
+int printf_octal(unsigned int x);
+int printf_hex(unsigned int x);
+int printf_HEX(unsigned int x);
+int printf_string(va_list args);
+int printf_char(va_list args);
+int printf_pointer(va_list args);
+int get_flags(char s, args);
+int printf_rev(va_list args);
+int printf_rot13(va_list args);
+
+/**
+ * struct format - match the conversion specifiers for printf
+ * @id: type of specifier
+ * @f: pointer
+ */
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} convert_match;
 
 #endif
